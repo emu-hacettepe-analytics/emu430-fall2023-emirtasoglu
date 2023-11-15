@@ -5,26 +5,19 @@ sidebar: false
 
 # Education
 
--   B.S., Industrial Engineering, Hacettepe University, Turkey, 20xx - ongoing.
+-   B.S., Industrial Engineering, Hacettepe University, Turkey, 2018 - ongoing.
 
-# Work Experience
 
-## Employements
+# Internships
 
-1.  Firm xxx, position xx, year xxx
+  Firm Dikey Otomasyon Müş. Makina Ve Amb.teknolojileri İth. İhr.ltd.şti., position production planning, year 2021
 
-2.  Firm yyy, position yyy, year yyy
 
-## Internships
-
-1.  Firm aaa, position xx, year xxx
-
-2.  Firm bbb, position yyy, year yyy
-
-# Projects
 
 # Competencies
 
-R, Quarto, Git, Python
+R, Quarto, Git, Python, Excel, Word
 
 # Hobbies
+I like listening music. I follow various sports branches. I like chatting with my friends.
+
