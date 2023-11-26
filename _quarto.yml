@@ -43,7 +43,7 @@ format:
     toc: true
     toc-location: left
     theme: 
-      light: looks
+      light: lux
       dark: solar
     css: styles.css
 

@@ -13,7 +13,7 @@ Firm Dikey Otomasyon MC\<E. Makina Ve Amb.teknolojileri D0th. D0hr.ltd.Eti., p
 
 # Competencies
 
-R, Quarto, Git, Python, Excel, Word
+R, Quarto, Git, Python, Excel, MC Word
 
 # Hobbies
 
