@@ -7,18 +7,18 @@ sidebar: false
 
 -   B.S., Industrial Engineering, Hacettepe University, Turkey, 2018 - ongoing.
 
-
 # Internships
 
-  Firm Dikey Otomasyon MC<E. Makina Ve Amb.teknolojileri D0th. D0hr.ltd.Eti., position production planning, year 2021
-
-
+Firm Dikey Otomasyon MC\<E. Makina Ve Amb.teknolojileri D0th. D0hr.ltd.Eti., position production planning, year 2021
 
 # Competencies
 
 R, Quarto, Git, Python, Excel, Word
 
 # Hobbies
+
 I like listening music. I follow various sports branches. I like chatting with my friends.
 
-file:///C:/Users/ssila/OneDrive/Masa%C3%BCst%C3%BC/CV%20Emir%20Ta%C5%9Fo%C4%9Flu%20%231.pdf
+# CV
+
+[cv](https://drive.google.com/file/d/12GjvIvLj3VwYAAt3KHLEvg6mkbbtIQuR/view?usp=drive_link)
