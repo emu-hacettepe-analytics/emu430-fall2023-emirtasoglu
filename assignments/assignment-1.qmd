@@ -4,14 +4,198 @@ title: "Assignment 1"
 
 # Assignment 1
 
-```{pyhton}
-x = 1 + 1
-print(x)
-```
-
 My first assignment has three parts.
 
-## (a)
-### 
+## (a)**Digging a Pit of Success for Your Organization: Embracing a R-based ecosystem in the US federal government**
 
-## (b)
+[video](https://www.rstudio.com/conference/2022/talks/leveraging-r-based-ecosystem/)(<https://www.rstudio.com/conference/2022/talks/leveraging-r-based-ecosystem/>)
+
+We demonstrate in this video how a US federal agency, whose mission is to stop the HIV epidemic worldwide, effectively analyzes massive datasets from many sources in multiple places. Our team switched from using Excel to R five years ago in order to do more efficient analysis. You've done a great job creating a "pit of success," or encouraging environment, to help analysts become more proficient with R. By sharing our experiences and knowledge, we hope to assist other businesses in creating environments that work well for thorough data analysis.
+
+## (b) **Differeneces between R and Pyhton**
+
+1.  Finding the Square Roots of the List's Elements
+
+The sqrt function in R is used to do the same task as looping over a list in Python to calculate the square root of each member in the list.
+
+Below is an example of how to find the square root in R:
+
+```         
+vector <- c(49, 81, 16,64) 
+#Calculate square roots of elements 
+square_roots <- sqrt(vector)  
+#Print the list of square roots cat
+("square_roots:", square_roots)
+```
+
+```         
+square_roots: 7 9 4 8
+
+Here an example of calculating square root in Python :
+
+list = [49, 81, 16,64] 
+square_roots = []
+#Calculate square roots and add the list of them
+for i in list:
+  square_roots.append(i**0.5)
+
+#Print the list of square roots
+print("square_roots:", square_roots)
+
+square_roots: [7.0, 9.0, 4.0, 8.0]
+
+2. Mean Function
+
+The bulk of functions are included in the R programming language, which makes it simpler to use; nevertheless, we need to obtain libraries in order to use them in Python. For instance, "mean";
+
+Here is an illustration of how to use R's mean function:
+weights_in_kg <- c(120,86, 75, 61, 45, 93, 84)
+average <- mean(weights_in_kg)
+cat("the average of weights:", average)
+
+The average of weights: 80.57143
+
+Here is an illustration of how to use Pyhton's mean function:
+
+# Import numpy for using mean function
+import numpy as np
+weights_in_kg = [120,86, 75, 61, 45, 93, 84]
+
+#Calculate of average of heights
+average = np.mean(weights_in_kg)
+
+# Print the value of variable
+print("the average of weights:", average)
+
+The average of weights: 80.57142857142857
+
+3. Data Frame Handling:
+R:
+
+R
+
+# Creating a data frame
+data_frame <- data.frame(
+  Name = c("Alice", "Bob", "Charlie"),
+  Age = c(25, 30, 22)
+)
+
+# Accessing a column
+ages <- data_frame$Age
+Python:
+
+python
+
+# Importing pandas for data frames
+import pandas as pd
+
+# Creating a data frame
+data_frame = pd.DataFrame({
+    'Name': ["Alice", "Bob", "Charlie"],
+    'Age': [25, 30, 22]
+})
+
+# Accessing a column
+ages = data_frame['Age']
+
+
+(c) na_example Data Set
+In this section, we examine the na_example data set to identify NAs and replace them with 0.
+
+# Import the ???na_example??? data set
+library(dslabs)
+data("na_example")
+
+#Print the data set 
+na_example
+
+   [1]  2  1  3  2  1  3  1  4  3  2  2 NA  2  2  1  4 NA  1  1  2  1  2  2  1
+  [25]  2  5 NA  2  2  3  1  2  4  1  1  1  4  5  2  3  4  1  2  4  1  1  2  1
+  [49]  5 NA NA NA  1  1  5  1  3  1 NA  4  4  7  3  2 NA NA  1 NA  4  1  2  2
+  [73]  3  2  1  2  2  4  3  4  2  3  1  3  2  1  1  1  3  1 NA  3  1  2  2  1
+  [97]  2  2  1  1  4  1  1  2  3  3  2  2  3  3  3  4  1  1  1  2 NA  4  3  4
+ [121]  3  1  2  1 NA NA NA NA  1  5  1  2  1  3  5  3  2  2 NA NA NA NA  3  5
+ [145]  3  1  1  4  2  4  3  3 NA  2  3  2  6 NA  1  1  2  2  1  3  1  1  5 NA
+ [169] NA  2  4 NA  2  5  1  4  3  3 NA  4  3  1  4  1  1  3  1  1 NA NA  3  5
+ [193]  2  2  2  3  1  2  2  3  2  1 NA  2 NA  1 NA NA  2  1  1 NA  3 NA  1  2
+ [217]  2  1  3  2  2  1  1  2  3  1  1  1  4  3  4  2  2  1  4  1 NA  5  1  4
+ [241] NA  3 NA NA  1  1  5  2  3  3  2  4 NA  3  2  5 NA  2  3  4  6  2  2  2
+ [265] NA  2 NA  2 NA  3  3  2  2  4  3  1  4  2 NA  2  4 NA  6  2  3  1 NA  2
+ [289]  2 NA  1  1  3  2  3  3  1 NA  1  4  2  1  1  3  2  1  2  3  1 NA  2  3
+ [313]  3  2  1  2  3  5  5  1  2  3  3  1 NA NA  1  2  4 NA  2  1  1  1  3  2
+ [337]  1  1  3  4 NA  1  2  1  1  3  3 NA  1  1  3  5  3  2  3  4  1  4  3  1
+ [361] NA  2  1  2  2  1  2  2  6  1  2  4  5 NA  3  4  2  1  1  4  2  1  1  1
+ [385]  1  2  1  4  4  1  3 NA  3  3 NA  2 NA  1  2  1  1  4  2  1  4  4 NA  1
+ [409]  2 NA  3  2  2  2  1  4  3  6  1  2  3  1  3  2  2  2  1  1  3  2  1  1
+ [433]  1  3  2  2 NA  4  4  4  1  1 NA  4  3 NA  1  3  1  3  2  4  2  2  2  3
+ [457]  2  1  4  3 NA  1  4  3  1  3  2 NA  3 NA  1  3  1  4  1  1  1  2  4  3
+ [481]  1  2  2  2  3  2  3  1  1 NA  3  2  1  1  2 NA  2  2  2  3  3  1  1  2
+ [505] NA  1  2  1  1  3  3  1  3  1  1  1  1  1  2  5  1  1  2  2  1  1 NA  1
+ [529]  4  1  2  4  1  3  2 NA  1  1 NA  2  1  1  4  2  3  3  1  5  3  1  1  2
+ [553] NA  1  1  3  1  3  2  4 NA  2  3  2  1  2  1  1  1  2  2  3  1  5  2 NA
+ [577]  2 NA  3  2  2  2  1  5  3  2  3  1 NA  3  1  2  2  2  1  2  2  4 NA  6
+ [601]  1  2 NA  1  1  2  2  3 NA  3  2  3  3  4  2 NA  2 NA  4 NA  1  1  2  2
+ [625]  3  1  1  1  3 NA  2  5 NA  7  1 NA  4  3  3  1 NA  1  1  1  1  3  2  4
+ [649]  2  2  3 NA NA  1  4  3  2  2  2  3  2  4  2  2  4 NA NA NA  6  3  3  1
+ [673]  4  4  2  1 NA  1  6 NA  3  3  2  1  1  6 NA  1  5  1 NA  2  6  2 NA  4
+ [697]  1  3  1  2 NA  1  1  3  1  2  4  2  1  3  2  4  3  2  2  1  1  5  6  4
+ [721]  2  2  2  2  4 NA  1  2  2  2  2  4  5 NA NA NA  4  3  3  3  2  4  2  4
+ [745] NA NA NA NA  2  1 NA  2  4  3  2 NA  2  3  1  3  4 NA  1  2  1  2 NA  3
+ [769]  1  2  1  2  1  2  1  2  2  2  2  1  1  3  3  1  3  4  3 NA NA  4  2  3
+ [793]  2  1  3  2  4  2  2  3  1  2  4  3  3  4 NA  1  4  2  1  1  1  3  1  5
+ [817]  2  2  4  2 NA  1  3  1  2 NA  1  2  1  2  1 NA  1  3  2  3  2 NA  2  1
+ [841]  4  2 NA NA NA  2  4  2 NA NA  3  1 NA  5  5  2  2  2 NA  2  1  3  1  3
+ [865]  2  4  2  4 NA  4  1  2  3  2  3  3  2  3  2  2  2  1  3  2  4  2 NA  3
+ [889]  3  2  2 NA NA  3  2  1  2  4  1  1  1  1  4  3  2 NA  3  2 NA  1 NA  3
+ [913]  2  1  1  1  2 NA  2  2  3  3  2 NA NA  4  5  2  2  2  1  2  3  1  3  3
+ [937]  4  3 NA  1  1  1 NA  4  3  5  1  1  2 NA  2  2  2  2  5  2  2  3  1  2
+ [961]  3 NA  1  2 NA NA  2 NA  3  1  1  2  5  3  5  1  1  4 NA  2  1  3  1  1
+ [985]  2  4  3  3  3 NA  1  1  2  2  1  1  2  2 NA  2
+# Count the total number of NA
+total_number_NA1 <- sum(is.na(na_example))
+cat("TOTAL NUMBER OF NA :", total_number_NA1 )
+
+TOTAL NUMBER OF NA : 145
+# Create new variable for data set with 0
+na_example_with_0 <- na_example
+
+# Replace NAs with 0
+na_example_with_0[is.na(na_example)] <- 0
+
+# Print new data set with 0
+na_example_with_0
+
+   [1] 2 1 3 2 1 3 1 4 3 2 2 0 2 2 1 4 0 1 1 2 1 2 2 1 2 5 0 2 2 3 1 2 4 1 1 1 4
+  [38] 5 2 3 4 1 2 4 1 1 2 1 5 0 0 0 1 1 5 1 3 1 0 4 4 7 3 2 0 0 1 0 4 1 2 2 3 2
+  [75] 1 2 2 4 3 4 2 3 1 3 2 1 1 1 3 1 0 3 1 2 2 1 2 2 1 1 4 1 1 2 3 3 2 2 3 3 3
+ [112] 4 1 1 1 2 0 4 3 4 3 1 2 1 0 0 0 0 1 5 1 2 1 3 5 3 2 2 0 0 0 0 3 5 3 1 1 4
+ [149] 2 4 3 3 0 2 3 2 6 0 1 1 2 2 1 3 1 1 5 0 0 2 4 0 2 5 1 4 3 3 0 4 3 1 4 1 1
+ [186] 3 1 1 0 0 3 5 2 2 2 3 1 2 2 3 2 1 0 2 0 1 0 0 2 1 1 0 3 0 1 2 2 1 3 2 2 1
+ [223] 1 2 3 1 1 1 4 3 4 2 2 1 4 1 0 5 1 4 0 3 0 0 1 1 5 2 3 3 2 4 0 3 2 5 0 2 3
+ [260] 4 6 2 2 2 0 2 0 2 0 3 3 2 2 4 3 1 4 2 0 2 4 0 6 2 3 1 0 2 2 0 1 1 3 2 3 3
+ [297] 1 0 1 4 2 1 1 3 2 1 2 3 1 0 2 3 3 2 1 2 3 5 5 1 2 3 3 1 0 0 1 2 4 0 2 1 1
+ [334] 1 3 2 1 1 3 4 0 1 2 1 1 3 3 0 1 1 3 5 3 2 3 4 1 4 3 1 0 2 1 2 2 1 2 2 6 1
+ [371] 2 4 5 0 3 4 2 1 1 4 2 1 1 1 1 2 1 4 4 1 3 0 3 3 0 2 0 1 2 1 1 4 2 1 4 4 0
+ [408] 1 2 0 3 2 2 2 1 4 3 6 1 2 3 1 3 2 2 2 1 1 3 2 1 1 1 3 2 2 0 4 4 4 1 1 0 4
+ [445] 3 0 1 3 1 3 2 4 2 2 2 3 2 1 4 3 0 1 4 3 1 3 2 0 3 0 1 3 1 4 1 1 1 2 4 3 1
+ [482] 2 2 2 3 2 3 1 1 0 3 2 1 1 2 0 2 2 2 3 3 1 1 2 0 1 2 1 1 3 3 1 3 1 1 1 1 1
+ [519] 2 5 1 1 2 2 1 1 0 1 4 1 2 4 1 3 2 0 1 1 0 2 1 1 4 2 3 3 1 5 3 1 1 2 0 1 1
+ [556] 3 1 3 2 4 0 2 3 2 1 2 1 1 1 2 2 3 1 5 2 0 2 0 3 2 2 2 1 5 3 2 3 1 0 3 1 2
+ [593] 2 2 1 2 2 4 0 6 1 2 0 1 1 2 2 3 0 3 2 3 3 4 2 0 2 0 4 0 1 1 2 2 3 1 1 1 3
+ [630] 0 2 5 0 7 1 0 4 3 3 1 0 1 1 1 1 3 2 4 2 2 3 0 0 1 4 3 2 2 2 3 2 4 2 2 4 0
+ [667] 0 0 6 3 3 1 4 4 2 1 0 1 6 0 3 3 2 1 1 6 0 1 5 1 0 2 6 2 0 4 1 3 1 2 0 1 1
+ [704] 3 1 2 4 2 1 3 2 4 3 2 2 1 1 5 6 4 2 2 2 2 4 0 1 2 2 2 2 4 5 0 0 0 4 3 3 3
+ [741] 2 4 2 4 0 0 0 0 2 1 0 2 4 3 2 0 2 3 1 3 4 0 1 2 1 2 0 3 1 2 1 2 1 2 1 2 2
+ [778] 2 2 1 1 3 3 1 3 4 3 0 0 4 2 3 2 1 3 2 4 2 2 3 1 2 4 3 3 4 0 1 4 2 1 1 1 3
+ [815] 1 5 2 2 4 2 0 1 3 1 2 0 1 2 1 2 1 0 1 3 2 3 2 0 2 1 4 2 0 0 0 2 4 2 0 0 3
+ [852] 1 0 5 5 2 2 2 0 2 1 3 1 3 2 4 2 4 0 4 1 2 3 2 3 3 2 3 2 2 2 1 3 2 4 2 0 3
+ [889] 3 2 2 0 0 3 2 1 2 4 1 1 1 1 4 3 2 0 3 2 0 1 0 3 2 1 1 1 2 0 2 2 3 3 2 0 0
+ [926] 4 5 2 2 2 1 2 3 1 3 3 4 3 0 1 1 1 0 4 3 5 1 1 2 0 2 2 2 2 5 2 2 3 1 2 3 0
+ [963] 1 2 0 0 2 0 3 1 1 2 5 3 5 1 1 4 0 2 1 3 1 1 2 4 3 3 3 0 1 1 2 2 1 1 2 2 0
+[1000] 2
+# Count the total number of NA in new data set
+total_number_NA2 <- sum(is.na(na_example_with_0))
+cat("TOTAL NUMBER OF NA :", total_number_NA2 )
+
+TOTAL NUMBER OF NA : 0
+```
